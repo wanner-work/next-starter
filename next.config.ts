@@ -1,8 +1,11 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true
+  reactCompiler: true,
+  typescript: {
+    // we can ignore typescript build errors because we have type aware linting with oxlint
+    ignoreBuildErrors: true
+  },
 }
 
 export default nextConfig
