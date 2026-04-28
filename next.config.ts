@@ -9,7 +9,6 @@ const nextConfig: NextConfig = {
   }
 }
 
-const withNextIntl = createNextIntlPlugin({
-  requestConfig: 'src/methods/i18n/request.ts'
-})
+const withNextIntl = createNextIntlPlugin('./src/methods/i18n/request.ts')
+
 export default withNextIntl(nextConfig)

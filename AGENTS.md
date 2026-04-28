@@ -133,7 +133,7 @@ All of the above require refactoring: either move the shared concern up a layer 
 - Translations are done using the `next-intl` package with its corresponding hooks and components.
 - Each feature has its own `i18n/` folder for translations specific to that feature.
 - Add a `[language-key like de].json` file for each supported language (currently only de.json) for each feature.
-- Import the translation file in the `src/i18n/request.ts` file to make it available for the application.
+- Import the translation file in the `src/methods/i18n/request.ts` file to make it available for the application.
 - The translations which are written inside the json files need to be inside an object with the key of the feature folder name, for example:
 
 ```json
@@ -201,7 +201,7 @@ Every test that renders a component using `next-intl` MUST mock `next-intl` with
 ```ts
 vi.mock('next-intl', () => ({
   useTranslations: (namespace?: string) => (key: string) =>
-    namespace ? `${namespace}.${key}` : key
+          namespace ? `${namespace}.${key}` : key
 }))
 ```
 
