@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Zubi - Schuhe, Bekleidung und Ausrüstung für Draussen'
+  title: 'next-starter - minimal starter template to use with next.js.'
 }
 
 export default function RootLayout({
