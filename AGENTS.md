@@ -243,8 +243,11 @@ Every feature change must reach both the desktop AND the mobile experience befor
 
 ## Docs + TODO Lifecycle
 
-- Use `features/<featureName>/docs/<featureName>Spec.md` for stable behavior, decisions, and implementation notes.
+- Use `features/<featureName>/docs/<featureName>Spec.md` for a concise functional specification only.
+- Functional specs must focus on user outcomes and behavior (goal, scope, flows, states, acceptance criteria).
+- Do not include technical implementation documentation in feature specs (folder structures, DTO/view-model shapes, API/service wiring, test strategy, commands, or code-level guardrails).
 - Use `features/<featureName>/docs/<featureName>Todo.md` only for open work items that are actionable.
+- Keep technical implementation notes in code, PR descriptions, or TODO items when needed.
 - When a TODO is implemented, mark it as checked in `<featureName>Todo.md` and reflect the final behavior in `<featureName>Spec.md` in the same change.
 - Keep completed checklist items in TODO docs as checked entries for traceability; do not delete them.
 
@@ -252,6 +255,7 @@ Every feature change must reach both the desktop AND the mobile experience befor
 
 - Lint passes with the repository standard (`pnpm run lint`) (the linting is type aware so never run `tsc` on your own).
 - Formatting is compliant with the repository standard (`pnpm run fmt`).
+- Unused code is removed using knip (`pnpm run knip`).
 - Relevant tests pass (feature-level tests and/or `e2e` coverage for changed user flows).
 - Documentation is updated when behavior or architecture contracts change.
 - Changes respect the architecture rules in this `AGENTS.md` (page scope, feature boundaries, api/utilities ownership).

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "tags": [
+    "-lintignore"
+  ],
+  "project": [
+    "src/features/**/*.ts",
+    "src/features/**/*.tsx",
+    "src/methods/",
+    "src/styles/",
+    "src/lib/",
+    "src/hooks/"
+  ],
+  "ignoreDependencies": [
+    "postcss",
+    "@typescript/native-preview",
+    "tailwindcss",
+    "@base-ui/react",
+    "@hugeicons/core-free-icons",
+    "@hugeicons/react",
+    "class-variance-authority",
+    "clsx",
+    "cmdk",
+    "date-fns",
+    "embla-carousel-react",
+    "input-otp",
+    "next-themes",
+    "react-day-picker",
+    "react-resizable-panels",
+    "recharts",
+    "shadcn",
+    "sonner",
+    "tailwind-merge",
+    "tw-animate-css",
+    "vaul"
+  ]
+}
