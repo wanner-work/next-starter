@@ -72,10 +72,11 @@ features/<featureName>/
     homeHeroSpec.md
     homeHeroTodo.md
   components/ # flat list only (no nested component folders)
-  hooks/ # flat list only (no nested component folders)
-  methods/ # flat list only (no nested component folders)
-  actions/ # flat list only (no nested component folders)
-  tests/ # flat list only (no nested component folders)
+  hooks/ # flat list only
+  methods/ # flat list only
+  constants/ # flat list only
+  actions/ # flat list only
+  tests/ # flat list only
   i18n/
 ```
 
@@ -101,6 +102,7 @@ graph a directed acyclic graph with `app/*` at the top and `features/*` as leave
   - `src/components/` for other shared UI components,
   - `src/methods/` for pure helper methods,
   - `src/hooks/` for helper hooks,
+  - `src/constants/` for shared constants,
   - `src/interfaces/` for shared interfaces,
   - `src/types/` for shared utility or union types,
 
